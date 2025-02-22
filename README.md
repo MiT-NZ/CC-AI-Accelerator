@@ -1,10 +1,12 @@
-# OpenAI-Accelerator / 开源AI加速器
+# CC AI Accelerator
+
+![CC AI Accelerator Logo](logo.png)
 
 ## 项目简介 / Project Overview
-**OpenAI-Accelerator** 是一款 **开源 AI 加速卡**，支持 **M.2 NVMe 2280 和 PCIe x4/x8** 接口。
+**CC AI Accelerator** 是一款 **开源 AI 加速卡**，支持 **M.2 NVMe 2280 和 PCIe x4/x8** 接口。
 目标是让 AI 计算像 NVMe 读写一样简单，并兼容 **TensorFlow, PyTorch, ONNX**。
 
-**OpenAI-Accelerator** is an **open-source AI accelerator card** that supports **M.2 NVMe 2280 and PCIe x4/x8** interfaces.
+**CC AI Accelerator** is an **open-source AI accelerator card** that supports **M.2 NVMe 2280 and PCIe x4/x8** interfaces.
 The goal is to make AI computing as easy as NVMe storage access while being compatible with **TensorFlow, PyTorch, ONNX**.
 
 ## 主要特点 / Key Features
@@ -68,4 +70,23 @@ OpenAI-Accelerator/
 - **AI framework adaptation**: Ensure PyTorch / TensorFlow can utilize the hardware.
 
 ### 3. 社区与贡献 / Community & Contributions
+请阅读 [CONTRIBUTING.md](CONTRIBUTING.md) 了解如何参与。
 欢迎贡献代码和硬件设计！ / Contributions to code and hardware design are welcome!
+
+### 4. 许可证 / License
+本项目基于 **MIT 许可证** 开源。
+
+## 安装与使用 / Installation & Usage
+### **安装驱动 / Install Driver**
+```bash
+git clone https://github.com/MiT-NZ/CC-AI-Accelerator.git
+cd CC-AI-Accelerator/software/driver
+make
+sudo insmod ai_driver.ko
+```
+
+### **运行 AI 计算任务 / Run AI Tasks**
+```python
+import ai_api
+ai_api.run_ai_task()
+```
